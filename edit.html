@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/jalalidatepicker.min.css" />
+    <title>ویرایش</title>
+</head>
+
+<body class="edit">
+
+    <form id="add-user-modal" style="display: block;;">
+        <div class="edit-box">
+            <h2>ویرایش کاربر</h2>
+            <div>
+                <div class="edit-row">
+                    <p class="edit-label">تاریخ انقضاء:</p>
+                    <div class="date">
+                        <input data-jdp class="w-250">
+                        <input type="number">
+                    </div>
+                </div>
+                <div class="edit-row">
+                    <p class="edit-label">حجم (GB):</p>
+                    <input class="w-250">
+                </div>
+                <div class="edit-row">
+                    <p class="edit-label">تعداد کاربر:</p>
+                    <input class="w-250">
+                </div>
+                <div class="edit-row">
+                    <p class="edit-label">لینک سایت:</p>
+                    <input class="w-250" value="https://www.figma.com/file/jh">
+                    <a><img alt="copy" src="assets/img/copy 1.png"></a>
+                </div>
+                <div class="edit-row">
+                    <p class="edit-label">رمز:</p>
+                    <input class="w-250" type="password" value="1234">
+                    <a><img alt="copy" src="assets/img/copy 1.png"></a>
+                </div>
+                <div class="edit-row">
+                    <p class="edit-label">وضعیت فعالسازی:</p>
+                    <div class="w-250">
+                        <div class="check active">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-row" style="margin-bottom: 0;">
+                    <p class="edit-label"></p>
+                    <div class="buttons w-250">
+                        <a class="w-120">برگشت</a>
+                        <input class="w-120" type="submit" value="ثبت کاربر">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="assets/js/jalalidatepicker.min.js"></script>
+    <script>
+        // jalali date
+
+jalaliDatepicker.startWatch();
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/jalalidatepicker.min.css" />
+    <title>صفحه اصلی</title>
+</head>
+
+<body>
+
+    <!-- ham icon -->
+
+    <!-- overlay -->
+    <div id="overlay"></div>
+
+    <!-- add user modal -->
+
+    <form id="add-user-modal">
+        <h2>اضافه کردن کاربر</h2>
+        <div>
+            <div>
+                <p>نام کاربری</p>
+                <input placeholder="shima_10">
+            </div>
+            <div class="date-row">
+                <div>
+                    <p>تاریخ</p>
+                    <div class="date">
+                        <input data-jdp>
+                    </div>
+                </div>
+                <div>
+                    <p>روز</p>
+                    <div class="date">
+                        <input type="number">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>حجم (GB)</p>
+                <input>
+            </div>
+            <div>
+                <p>تعداد کاربر</p>
+                <input>
+            </div>
+            <div class="buttons">
+                <button class="back" onclick="goback(event)">برگشت</button>
+                <input type="submit" value="ثبت کاربر">
+            </div>
+        </div>
+    </form>
+
+    <div class="dashboard">
+        <!-- header -->
+
+        <header>
+            <div id="close"><img alt="close" src="assets/img/arrow 1.png"></div>
+            <div>
+                <img alt="profile" src="assets/img/woman 1.png">
+                <h1>شیما نامدار</h1>
+                <p>shima.22@gmail.com</p>
+            </div>
+            <div>
+                <ul>
+                    <li onclick="addUser()">
+                        <a>
+                            <img alt="menu-icon" src="assets/img/add-friend 1.png">
+                            <span>اضافه کردن کاربر</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img alt="menu-icon" src="assets/img/notification (2) 1.png">
+                            <span>پیام ها</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img alt="menu-icon" src="assets/img/money-bag 1.png">
+                            <span>گزارش مالی</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img alt="menu-icon" src="assets/img/customer-service (1) 1.png">
+                            <span>پشتیبانی</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img alt="menu-icon" src="assets/img/presentation 1.png">
+                            <span>آموزش</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <!-- nav -->
+            <nav class="nav">
+                <!-- profile -->
+                <div class="cursor" id="profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+                      </svg>
+                    <span>1</span>
+                </div>
+                <!-- logo && search -->
+                <div class="logo-search">
+                    <form>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                        <input type="search" placeholder="جستجوی کاربران">
+                    </form>
+                    <a class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-globe-central-south-asia" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM4.882 1.731a.482.482 0 0 0 .14.291.487.487 0 0 1-.126.78l-.291.146a.721.721 0 0 0-.188.135l-.48.48a1 1 0 0 1-1.023.242l-.02-.007a.996.996 0 0 0-.462-.04 7.03 7.03 0 0 1 2.45-2.027Zm-3 9.674.86-.216a1 1 0 0 0 .758-.97v-.184a1 1 0 0 1 .445-.832l.04-.026a1 1 0 0 0 .152-1.54L3.121 6.621a.414.414 0 0 1 .542-.624l1.09.818a.5.5 0 0 0 .523.047.5.5 0 0 1 .724.447v.455a.78.78 0 0 0 .131.433l.795 1.192a1 1 0 0 1 .116.238l.73 2.19a1 1 0 0 0 .949.683h.058a1 1 0 0 0 .949-.684l.73-2.189a1 1 0 0 1 .116-.238l.791-1.187A.454.454 0 0 1 11.743 8c.16 0 .306.084.392.218.557.875 1.63 2.282 2.365 2.282a.61.61 0 0 0 .04-.001 7.003 7.003 0 0 1-12.658.905Z"/>
+                          </svg>
+                    </a>
+                </div>
+            </nav>
+            <!-- volume -->
+            <section class="volume">
+                <div class="skill">
+                    <div class="outer">
+                        <div class="inner">
+                            <div>
+                                <div class="percent">
+                                    <div>100/</div>
+                                    <div id="number">
+                                        0
+                                    </div>
+                                </div>
+                                <div class="title">
+                                    <p>ظرفیت سرویس</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                        <defs>
+                            <linearGradient id="GradientColor">
+                                <stop offset="0%" stop-color="#580891" />
+                                <stop offset="100%" stop-color="#c448cf" />
+                            </linearGradient>
+                        </defs>
+                        <circle id="circle1" cx="80" cy="80" r="70"  stroke-linecap="round" />
+                    </svg>
+
+                </div>
+                <div class="skill">
+                    <div class="outer">
+                        <div class="inner">
+                            <div>
+                                <div class="percent">
+                                    <div>365/</div>
+                                    <div id="number2">
+                                        0
+                                    </div>
+                                </div>
+                                <div class="title">
+                                    <p>تا پایان سرویس</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                        <defs>
+                            <linearGradient id="GradientColor">
+                                <stop offset="0%" stop-color="#580891" />
+                                <stop offset="100%" stop-color="#c448cf" />
+                            </linearGradient>
+                        </defs>
+                        <circle id="circle2" cx="80" cy="80" r="70"  stroke-linecap="round" />
+                    </svg>
+
+                </div>
+                <div class="skill">
+                    <div class="outer">
+                        <div class="inner">
+                            <div>
+                                <div class="percent">
+                                    <div>500/</div>
+                                    <div id="number3">
+                                        0
+                                    </div>
+                                </div>
+                                <div class="title">
+                                    <p>حجم باقیمانده</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                        <defs>
+                            <linearGradient id="GradientColor">
+                                <stop offset="0%" stop-color="#580891" />
+                                <stop offset="100%" stop-color="#c448cf" />
+                            </linearGradient>
+                        </defs>
+                        <circle id="circle3" cx="80" cy="80" r="70"  stroke-linecap="round" />
+                    </svg>
+
+                </div>
+            </section>
+            <!-- users -->
+            <section class="users">
+                <div class="head head1">
+                    <div>
+                        <div>
+                            <div>نام کاربری</div>
+                            <div>فعالسازی</div>
+                            <div>اعتبار حساب</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>کنترل</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="head head2">
+                    <div>
+                        <div style="display: none;">
+                            <div>نام کاربری</div>
+                            <div>فعالسازی</div>
+                            <div>اعتبار حساب</div>
+                        </div>
+                        <div class="box">
+                            <div class="user-details">
+                                <div class="avatar-name">
+                                    <img alt="avatar" src="assets/img/woman 1.png">
+                                    <h5>شیما نامدار</h5>
+                                    <span class="situation green"></span>
+                                </div>
+                                <div>
+                                    <div class="check active">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <span style="width: 20%;" class="slider"></span>
+                                    <div class="circle"><span class="Gig">20G</span></div>
+                                </div>
+                                <div class="icons">
+                                    <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                    <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                    <a class="info">
+                                        <div class="info-hover">
+                                            <div>
+                                                <span>مدت اعتبار:</span>
+                                                <span>45 روز</span>
+                                            </div>
+                                            <div>
+                                                <span>حجم کل:</span>
+                                                <span>50G</span>
+                                            </div>
+                                            <div>
+                                                <span>آپلود:</span>
+                                                <span>4G</span>
+                                            </div>
+                                            <div>
+                                                <span>دانلود:</span>
+                                                <span>20G</span>
+                                            </div>
+                                            <div>
+                                                <span>وضعیت:</span>
+                                                <span>فعال</span>
+                                            </div>
+                                        </div>
+                                        <img alt="icon" src="assets/img/info.png">
+                                    </a>
+                                    <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                    <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <div class="avatar-name">
+                                    <img alt="avatar" src="assets/img/girl 1.png">
+                                    <h5>لیلا امانی</h5>
+                                    <span class="situation gray"></span>
+                                </div>
+                                <div>
+                                    <div class="check">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <span style="width: 20%;" class="slider"></span>
+                                    <div class="circle"><span class="Gig">20G</span></div>
+                                </div>
+                                <div class="icons">
+                                    <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                    <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                    <a class="info">
+                                        <div class="info-hover">
+                                            <div>
+                                                <span>مدت اعتبار:</span>
+                                                <span>45 روز</span>
+                                            </div>
+                                            <div>
+                                                <span>حجم کل:</span>
+                                                <span>50G</span>
+                                            </div>
+                                            <div>
+                                                <span>آپلود:</span>
+                                                <span>4G</span>
+                                            </div>
+                                            <div>
+                                                <span>دانلود:</span>
+                                                <span>20G</span>
+                                            </div>
+                                            <div>
+                                                <span>وضعیت:</span>
+                                                <span>فعال</span>
+                                            </div>
+                                        </div>
+                                        <img alt="icon" src="assets/img/info.png">
+                                    </a>
+                                    <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                    <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <div class="avatar-name">
+                                    <img alt="avatar" src="assets/img/user (1) 1.png">
+                                    <h5>امیرعلی فلاح</h5>
+                                    <span class="situation red"></span>
+                                </div>
+                                <div>
+                                    <div class="check active">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <span style="width: 20%;" class="slider"></span>
+                                    <div class="circle"><span class="Gig">20G</span></div>
+                                </div>
+                                <div class="icons">
+                                    <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                    <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                    <a class="info">
+                                        <div class="info-hover">
+                                            <div>
+                                                <span>مدت اعتبار:</span>
+                                                <span>45 روز</span>
+                                            </div>
+                                            <div>
+                                                <span>حجم کل:</span>
+                                                <span>50G</span>
+                                            </div>
+                                            <div>
+                                                <span>آپلود:</span>
+                                                <span>4G</span>
+                                            </div>
+                                            <div>
+                                                <span>دانلود:</span>
+                                                <span>20G</span>
+                                            </div>
+                                            <div>
+                                                <span>وضعیت:</span>
+                                                <span>فعال</span>
+                                            </div>
+                                        </div>
+                                        <img alt="icon" src="assets/img/info.png">
+                                    </a>
+                                    <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                    <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <div class="avatar-name">
+                                    <img alt="avatar" src="assets/img/woman 1.png">
+                                    <h5>شیما نامدار</h5>
+                                    <span class="situation green"></span>
+                                </div>
+                                <div>
+                                    <div class="check active">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <span style="width: 20%;" class="slider"></span>
+                                    <div class="circle"><span class="Gig">20G</span></div>
+                                </div>
+                                <div class="icons">
+                                    <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                    <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                    <a class="info">
+                                        <div class="info-hover">
+                                            <div>
+                                                <span>مدت اعتبار:</span>
+                                                <span>45 روز</span>
+                                            </div>
+                                            <div>
+                                                <span>حجم کل:</span>
+                                                <span>50G</span>
+                                            </div>
+                                            <div>
+                                                <span>آپلود:</span>
+                                                <span>4G</span>
+                                            </div>
+                                            <div>
+                                                <span>دانلود:</span>
+                                                <span>20G</span>
+                                            </div>
+                                            <div>
+                                                <span>وضعیت:</span>
+                                                <span>فعال</span>
+                                            </div>
+                                        </div>
+                                        <img alt="icon" src="assets/img/info.png">
+                                    </a>
+                                    <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                    <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <div class="avatar-name">
+                                    <img alt="avatar" src="assets/img/girl 1.png">
+                                    <h5>لیلا امانی</h5>
+                                    <span class="situation gray"></span>
+                                </div>
+                                <div>
+                                    <div class="check">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <span style="width: 20%;" class="slider"></span>
+                                    <div class="circle"><span class="Gig">20G</span></div>
+                                </div>
+                                <div class="icons">
+                                    <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                    <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                    <a class="info">
+                                        <div class="info-hover">
+                                            <div>
+                                                <span>مدت اعتبار:</span>
+                                                <span>45 روز</span>
+                                            </div>
+                                            <div>
+                                                <span>حجم کل:</span>
+                                                <span>50G</span>
+                                            </div>
+                                            <div>
+                                                <span>آپلود:</span>
+                                                <span>4G</span>
+                                            </div>
+                                            <div>
+                                                <span>دانلود:</span>
+                                                <span>20G</span>
+                                            </div>
+                                            <div>
+                                                <span>وضعیت:</span>
+                                                <span>فعال</span>
+                                            </div>
+                                        </div>
+                                        <img alt="icon" src="assets/img/info.png">
+                                    </a>
+                                    <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                    <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <div class="avatar-name">
+                                    <img alt="avatar" src="assets/img/user (1) 1.png">
+                                    <h5>امیرعلی فلاح</h5>
+                                    <span class="situation red"></span>
+                                </div>
+                                <div>
+                                    <div class="check active">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <span style="width: 20%;" class="slider"></span>
+                                    <div class="circle"><span class="Gig">20G</span></div>
+                                </div>
+                                <div class="icons">
+                                    <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                    <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                    <a class="info">
+                                        <div class="info-hover">
+                                            <div>
+                                                <span>مدت اعتبار:</span>
+                                                <span>45 روز</span>
+                                            </div>
+                                            <div>
+                                                <span>حجم کل:</span>
+                                                <span>50G</span>
+                                            </div>
+                                            <div>
+                                                <span>آپلود:</span>
+                                                <span>4G</span>
+                                            </div>
+                                            <div>
+                                                <span>دانلود:</span>
+                                                <span>20G</span>
+                                            </div>
+                                            <div>
+                                                <span>وضعیت:</span>
+                                                <span>فعال</span>
+                                            </div>
+                                        </div>
+                                        <img alt="icon" src="assets/img/info.png">
+                                    </a>
+                                    <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                    <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <div class="avatar-name">
+                                    <img alt="avatar" src="assets/img/woman 1.png">
+                                    <h5>شیما نامدار</h5>
+                                    <span class="situation green"></span>
+                                </div>
+                                <div>
+                                    <div class="check active">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <span style="width: 20%;" class="slider"></span>
+                                    <div class="circle"><span class="Gig">20G</span></div>
+                                </div>
+                                <div class="icons">
+                                    <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                    <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                    <a class="info">
+                                        <div class="info-hover">
+                                            <div>
+                                                <span>مدت اعتبار:</span>
+                                                <span>45 روز</span>
+                                            </div>
+                                            <div>
+                                                <span>حجم کل:</span>
+                                                <span>50G</span>
+                                            </div>
+                                            <div>
+                                                <span>آپلود:</span>
+                                                <span>4G</span>
+                                            </div>
+                                            <div>
+                                                <span>دانلود:</span>
+                                                <span>20G</span>
+                                            </div>
+                                            <div>
+                                                <span>وضعیت:</span>
+                                                <span>فعال</span>
+                                            </div>
+                                        </div>
+                                        <img alt="icon" src="assets/img/info.png">
+                                    </a>
+                                    <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                    <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <div class="avatar-name">
+                                    <img alt="avatar" src="assets/img/girl 1.png">
+                                    <h5>لیلا امانی</h5>
+                                    <span class="situation gray"></span>
+                                </div>
+                                <div>
+                                    <div class="check">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <span style="width: 20%;" class="slider"></span>
+                                    <div class="circle"><span class="Gig">20G</span></div>
+                                </div>
+                                <div class="icons">
+                                    <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                    <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                    <a class="info">
+                                        <div class="info-hover">
+                                            <div>
+                                                <span>مدت اعتبار:</span>
+                                                <span>45 روز</span>
+                                            </div>
+                                            <div>
+                                                <span>حجم کل:</span>
+                                                <span>50G</span>
+                                            </div>
+                                            <div>
+                                                <span>آپلود:</span>
+                                                <span>4G</span>
+                                            </div>
+                                            <div>
+                                                <span>دانلود:</span>
+                                                <span>20G</span>
+                                            </div>
+                                            <div>
+                                                <span>وضعیت:</span>
+                                                <span>فعال</span>
+                                            </div>
+                                        </div>
+                                        <img alt="icon" src="assets/img/info.png">
+                                    </a>
+                                    <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                    <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                                </div>
+                            </div>
+                            <div class="user-details">
+                                <div class="avatar-name">
+                                    <img alt="avatar" src="assets/img/user (1) 1.png">
+                                    <h5>امیرعلی فلاح</h5>
+                                    <span class="situation red"></span>
+                                </div>
+                                <div>
+                                    <div class="check active">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="bar">
+                                    <span style="width: 20%;" class="slider"></span>
+                                    <div class="circle"><span class="Gig">20G</span></div>
+                                </div>
+                                <div class="icons">
+                                    <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                    <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                    <a class="info">
+                                        <div class="info-hover">
+                                            <div>
+                                                <span>مدت اعتبار:</span>
+                                                <span>45 روز</span>
+                                            </div>
+                                            <div>
+                                                <span>حجم کل:</span>
+                                                <span>50G</span>
+                                            </div>
+                                            <div>
+                                                <span>آپلود:</span>
+                                                <span>4G</span>
+                                            </div>
+                                            <div>
+                                                <span>دانلود:</span>
+                                                <span>20G</span>
+                                            </div>
+                                            <div>
+                                                <span>وضعیت:</span>
+                                                <span>فعال</span>
+                                            </div>
+                                        </div>
+                                        <img alt="icon" src="assets/img/info.png">
+                                    </a>
+                                    <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                    <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display: none;">
+                            <div>کنترل</div>
+                        </div>
+                        <div class="box">
+                            <div class="user-details">
+                                <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                <a class="info">
+                                    <div class="info-hover">
+                                        <div>
+                                            <span>مدت اعتبار:</span>
+                                            <span>45 روز</span>
+                                        </div>
+                                        <div>
+                                            <span>حجم کل:</span>
+                                            <span>50G</span>
+                                        </div>
+                                        <div>
+                                            <span>آپلود:</span>
+                                            <span>4G</span>
+                                        </div>
+                                        <div>
+                                            <span>دانلود:</span>
+                                            <span>20G</span>
+                                        </div>
+                                        <div>
+                                            <span>وضعیت:</span>
+                                            <span>فعال</span>
+                                        </div>
+                                    </div>
+                                    <img alt="icon" src="assets/img/info.png">
+                                </a>
+                                <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                            </div>
+                            <div class="user-details">
+                                <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                <a class="info">
+                                    <div class="info-hover">
+                                        <div>
+                                            <span>مدت اعتبار:</span>
+                                            <span>45 روز</span>
+                                        </div>
+                                        <div>
+                                            <span>حجم کل:</span>
+                                            <span>50G</span>
+                                        </div>
+                                        <div>
+                                            <span>آپلود:</span>
+                                            <span>4G</span>
+                                        </div>
+                                        <div>
+                                            <span>دانلود:</span>
+                                            <span>20G</span>
+                                        </div>
+                                        <div>
+                                            <span>وضعیت:</span>
+                                            <span>فعال</span>
+                                        </div>
+                                    </div>
+                                    <img alt="icon" src="assets/img/info.png">
+                                </a>
+                                <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                            </div>
+                            <div class="user-details">
+                                <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                <a class="info">
+                                    <div class="info-hover">
+                                        <div>
+                                            <span>مدت اعتبار:</span>
+                                            <span>45 روز</span>
+                                        </div>
+                                        <div>
+                                            <span>حجم کل:</span>
+                                            <span>50G</span>
+                                        </div>
+                                        <div>
+                                            <span>آپلود:</span>
+                                            <span>4G</span>
+                                        </div>
+                                        <div>
+                                            <span>دانلود:</span>
+                                            <span>20G</span>
+                                        </div>
+                                        <div>
+                                            <span>وضعیت:</span>
+                                            <span>فعال</span>
+                                        </div>
+                                    </div>
+                                    <img alt="icon" src="assets/img/info.png">
+                                </a>
+                                <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                            </div>
+                            <div class="user-details">
+                                <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                <a class="info">
+                                    <div class="info-hover">
+                                        <div>
+                                            <span>مدت اعتبار:</span>
+                                            <span>45 روز</span>
+                                        </div>
+                                        <div>
+                                            <span>حجم کل:</span>
+                                            <span>50G</span>
+                                        </div>
+                                        <div>
+                                            <span>آپلود:</span>
+                                            <span>4G</span>
+                                        </div>
+                                        <div>
+                                            <span>دانلود:</span>
+                                            <span>20G</span>
+                                        </div>
+                                        <div>
+                                            <span>وضعیت:</span>
+                                            <span>فعال</span>
+                                        </div>
+                                    </div>
+                                    <img alt="icon" src="assets/img/info.png">
+                                </a>
+                                <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                            </div>
+                            <div class="user-details">
+                                <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                <a class="info">
+                                    <div class="info-hover">
+                                        <div>
+                                            <span>مدت اعتبار:</span>
+                                            <span>45 روز</span>
+                                        </div>
+                                        <div>
+                                            <span>حجم کل:</span>
+                                            <span>50G</span>
+                                        </div>
+                                        <div>
+                                            <span>آپلود:</span>
+                                            <span>4G</span>
+                                        </div>
+                                        <div>
+                                            <span>دانلود:</span>
+                                            <span>20G</span>
+                                        </div>
+                                        <div>
+                                            <span>وضعیت:</span>
+                                            <span>فعال</span>
+                                        </div>
+                                    </div>
+                                    <img alt="icon" src="assets/img/info.png">
+                                </a>
+                                <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                            </div>
+                            <div class="user-details">
+                                <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                <a class="info">
+                                    <div class="info-hover">
+                                        <div>
+                                            <span>مدت اعتبار:</span>
+                                            <span>45 روز</span>
+                                        </div>
+                                        <div>
+                                            <span>حجم کل:</span>
+                                            <span>50G</span>
+                                        </div>
+                                        <div>
+                                            <span>آپلود:</span>
+                                            <span>4G</span>
+                                        </div>
+                                        <div>
+                                            <span>دانلود:</span>
+                                            <span>20G</span>
+                                        </div>
+                                        <div>
+                                            <span>وضعیت:</span>
+                                            <span>فعال</span>
+                                        </div>
+                                    </div>
+                                    <img alt="icon" src="assets/img/info.png">
+                                </a>
+                                <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                            </div>
+                            <div class="user-details">
+                                <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                <a class="info">
+                                    <div class="info-hover">
+                                        <div>
+                                            <span>مدت اعتبار:</span>
+                                            <span>45 روز</span>
+                                        </div>
+                                        <div>
+                                            <span>حجم کل:</span>
+                                            <span>50G</span>
+                                        </div>
+                                        <div>
+                                            <span>آپلود:</span>
+                                            <span>4G</span>
+                                        </div>
+                                        <div>
+                                            <span>دانلود:</span>
+                                            <span>20G</span>
+                                        </div>
+                                        <div>
+                                            <span>وضعیت:</span>
+                                            <span>فعال</span>
+                                        </div>
+                                    </div>
+                                    <img alt="icon" src="assets/img/info.png">
+                                </a>
+                                <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                            </div>
+                            <div class="user-details">
+                                <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                <a class="info">
+                                    <div class="info-hover">
+                                        <div>
+                                            <span>مدت اعتبار:</span>
+                                            <span>45 روز</span>
+                                        </div>
+                                        <div>
+                                            <span>حجم کل:</span>
+                                            <span>50G</span>
+                                        </div>
+                                        <div>
+                                            <span>آپلود:</span>
+                                            <span>4G</span>
+                                        </div>
+                                        <div>
+                                            <span>دانلود:</span>
+                                            <span>20G</span>
+                                        </div>
+                                        <div>
+                                            <span>وضعیت:</span>
+                                            <span>فعال</span>
+                                        </div>
+                                    </div>
+                                    <img alt="icon" src="assets/img/info.png">
+                                </a>
+                                <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                            </div>
+                            <div class="user-details">
+                                <a><img alt="icon" src="assets/img/pencil.png"></a>
+                                <a><img alt="icon" src="assets/img/qr-code.png"></a>
+                                <a class="info">
+                                    <div class="info-hover">
+                                        <div>
+                                            <span>مدت اعتبار:</span>
+                                            <span>45 روز</span>
+                                        </div>
+                                        <div>
+                                            <span>حجم کل:</span>
+                                            <span>50G</span>
+                                        </div>
+                                        <div>
+                                            <span>آپلود:</span>
+                                            <span>4G</span>
+                                        </div>
+                                        <div>
+                                            <span>دانلود:</span>
+                                            <span>20G</span>
+                                        </div>
+                                        <div>
+                                            <span>وضعیت:</span>
+                                            <span>فعال</span>
+                                        </div>
+                                    </div>
+                                    <img alt="icon" src="assets/img/info.png">
+                                </a>
+                                <a><img alt="icon" src="assets/img/circular-arows.png"></a>
+                                <a class="delete"><img alt="icon" src="assets/img/bin.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script type="text/javascript" src="assets/js/jalalidatepicker.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
