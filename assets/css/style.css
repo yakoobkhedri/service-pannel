@@ -588,7 +588,7 @@ header ul li a span {
 .head1 {
     height: 74px;
     position: sticky;
-    top: 125px;
+    top: 161px;
     z-index: 8;
 }
 
@@ -929,7 +929,9 @@ circle#circle3 {
     .mobile-search {
         display: block;
     }
-
+    .head1 {
+        top: 205px;
+    }
     .mobile-search {
         position: relative;
         width: 100%;
