@@ -929,7 +929,11 @@ circle#circle3 {
     .head1 {
         top: 59px;
     }
-
+    .dashboard {
+       margin: 0;
+       height: 98vh;
+       border-radius: 0;
+    }
     .head>div:first-child>div:first-child {
         justify-content: space-between;
     }
