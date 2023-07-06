@@ -65,7 +65,6 @@ main>div {
     top: 0;
     z-index: 10;
     background: white;
-    padding: 18px 0;
 }
 
 body {
@@ -482,7 +481,6 @@ header ul li a span {
     top: 0;
     z-index: 10;
     background: white;
-    padding: 18px 0;
 }
 
 #profile {
@@ -496,7 +494,6 @@ header ul li a span {
     position: relative;
     flex-shrink: 0;
     color: #8623ab;
-    background: #bf45cc26;
 }
 
 #profile span {
@@ -528,10 +525,6 @@ header ul li a span {
     height: 40px;
     background-color: #CC9BEE;
     border-radius: 50px;
-}
-
-.mobile-search {
-    display: none;
 }
 
 .logo-search form input {
@@ -588,7 +581,7 @@ header ul li a span {
 .head1 {
     height: 74px;
     position: sticky;
-    top: 161px;
+    top: 89px;
     z-index: 8;
 }
 
@@ -736,6 +729,10 @@ img[alt='icon'] {
     font-weight: bold;
     top: 9px;
     left: -21px;
+}
+
+.mobile-Gig {
+    display: none;
 }
 
 .icons {
@@ -925,36 +922,20 @@ circle#circle3 {
         width: 0%;
     }
 
-    #add-user-modal .date,
-    .mobile-search {
+    #add-user-modal .date {
         display: block;
     }
+
     .head1 {
-        top: 205px;
-    }
-    .mobile-search {
-        position: relative;
-        width: 100%;
-        height: 44px;
-        background-color: #CC9BEE;
-        border-radius: 50px;
+        top: 59px;
     }
 
-    .mobile-search input {
-     width: 100%;
-     height: 100%;
-     padding-right: 34px;
-     background-color: transparent;
-     border: none;
-     outline: none;
+    .head>div:first-child>div:first-child {
+        justify-content: space-between;
     }
-    .mobile-search svg {
-        position: absolute;
-        right: 7px;
-        top: 12px;
-    }
+
     #add-user-modal .date input:last-child {
-        margin-top: 49px;
+        margin-top: 6px;
     }
 
     #add-user-modal>div {
@@ -968,19 +949,16 @@ circle#circle3 {
         top: 26px;
     }
 
-    .head>div:last-child,
-    .logo-search form {
+
+    .logo-search a {
         display: none;
     }
 
-    .head>div:last-child>div:first-child {
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
+    .activation {
+        display: none;
     }
 
-    .head2>div:last-child {
-        margin-left: 32px;
-    }
+    .head>div:last-child>div:first-child {}
 
     .edit-row {
         flex-direction: column;
@@ -992,10 +970,7 @@ circle#circle3 {
     }
 
     .box .user-details {
-        flex-direction: column;
-        gap: 50px;
-        height: auto;
-        padding: 63px 9px 20px;
+        gap: 14px;
     }
 
     .box .user-details h5 {
@@ -1007,29 +982,27 @@ circle#circle3 {
     }
 
     .situation {
-        right: 0;
-        left: 0;
-        margin: auto;
-        bottom: 46px;
-        width: 16px;
-        height: 16px;
+        display: none;
     }
 
     .user-details>div {
         width: 100%;
     }
 
+    .user-details>div:nth-child(2) {
+        display: none;
+    }
+
     .icons {
-        display: flex;
+        display: none;
     }
 
     .avatar-name img {
-        width: 79px;
+        display: none;
     }
 
     .check {
-        width: 61px;
-        height: 30px;
+        display: none;
     }
 
     .check div {
@@ -1047,21 +1020,30 @@ circle#circle3 {
     }
 
     .Gig {
-        font-size: 18px;
-        top: 16px;
+        display: none;
     }
 
-    img[alt="icon"] {
-        width: 30px;
+    .operate {
+    }
+
+    .mobile-Gig {
+        display: block;
+        color: #581879;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .head>div:first-child>div:first-child>div {
+        width: 50%;
+    }
+
+    .nav {
+        padding: 9px 0;
     }
 
 }
 
 @media only screen and (max-width:576px) {
-    .logo-search form {
-        width: 51%;
-        margin-left: auto;
-    }
 
     .logo-search {
         gap: 0;
@@ -1072,4 +1054,33 @@ circle#circle3 {
         justify-content: center;
         gap: 24px;
     }
+
+    .avatar-name {
+        font-size: 13px;
+    }
+
+    .date-row {
+        flex-direction: column;
+    }
+
+    .date-row>div:first-child {
+        width: 100%;
+    }
+    .head > div:last-child {
+        width: 182px;
+      }
+}
+@media only screen and (max-width:400px) {
+    .head > div:last-child {
+        width: 127px;
+      }
+      img[alt="icon"] {
+        width: 10px;
+      }
+      .head > div:first-child > div:first-child{
+        font-size: 13px;
+      }
+      .mobile-Gig {
+       font-size: 10px;
+      }
 }
