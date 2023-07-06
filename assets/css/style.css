@@ -575,7 +575,7 @@ header ul li a span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
 }
 
 .head1 {
@@ -1079,12 +1079,22 @@ circle#circle3 {
         width: 127px;
       }
       img[alt="icon"] {
-        width: 10px;
+        width: 13px;
       }
-      .head > div:first-child > div:first-child{
-        font-size: 13px;
+      .head > div:first-child > div:first-child,.head > div:last-child > div:first-child {
+        font-size: 11px;
       }
       .mobile-Gig {
        font-size: 10px;
+      }
+      .bar {
+        height: 4px;
+      }
+      .user-details {
+    justify-content: center;
+      }
+      .circle {
+        width: 4px;
+        height: 4px;
       }
 }
