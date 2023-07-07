@@ -1079,7 +1079,7 @@ circle#circle3 {
         width: 127px;
       }
       img[alt="icon"] {
-        width: 13px;
+        width: 17px;
       }
       .head > div:first-child > div:first-child,.head > div:last-child > div:first-child {
         font-size: 11px;
@@ -1097,10 +1097,19 @@ circle#circle3 {
         width: 4px;
         height: 4px;
       }
-      .Gig {
+      /* .Gig {
         display: block;
       }
       .mobile-Gig {
        display: none;
+      } */
+      .box .user-details {
+        gap: 5px;
+      }
+      .user-details {
+        padding: 5px 3px;
+      }
+      .avatar-name {
+        width: 68%!important;
       }
 }
