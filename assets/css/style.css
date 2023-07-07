@@ -1097,4 +1097,10 @@ circle#circle3 {
         width: 4px;
         height: 4px;
       }
+      .Gig {
+        display: block;
+      }
+      .mobile-Gig {
+       display: none;
+      }
 }
