@@ -770,8 +770,8 @@ img[alt='icon'] {
     color: white;
     font-weight: bold;
     z-index: 9;
-    right: -130px;
-    bottom: -134px;
+    right: -175px;
+    top: -81px;
     line-height: 24px;
 }
 .info-hover>div {
