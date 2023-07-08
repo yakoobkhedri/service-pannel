@@ -737,7 +737,7 @@ img[alt='icon'] {
     font-size: 11px;
     font-weight: bold;
     top: 9px;
-    left: -21px;
+    left: 0;
 }
 
 .mobile-Gig {
@@ -770,8 +770,8 @@ img[alt='icon'] {
     color: white;
     font-weight: bold;
     z-index: 9;
-    right: -175px;
-    top: -81px;
+    right: -79px;
+    top: -137px;
     line-height: 24px;
 }
 .info-hover>div {
