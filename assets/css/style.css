@@ -937,7 +937,11 @@ circle#circle3 {
     .head>div:first-child>div:first-child {
         justify-content: space-between;
     }
-
+    .info-hover {
+        width: 151px;
+        line-height: 24px;
+        bottom: -134px;
+    }
     #add-user-modal .date input:last-child {
         margin-top: 6px;
     }
@@ -962,8 +966,6 @@ circle#circle3 {
         display: none;
     }
 
-    .head>div:last-child>div:first-child {}
-
     .edit-row {
         flex-direction: column;
         gap: 9px;
@@ -974,7 +976,7 @@ circle#circle3 {
     }
 
     .box .user-details {
-        gap: 14px;
+        gap: 9px;
     }
 
     .box .user-details h5 {
@@ -1027,9 +1029,6 @@ circle#circle3 {
         display: none;
     }
 
-    .operate {
-    }
-
     .mobile-Gig {
         display: block;
         color: #581879;
@@ -1058,7 +1057,18 @@ circle#circle3 {
         justify-content: center;
         gap: 24px;
     }
-
+    header {
+        width: 230px;
+    }
+    header > div:nth-child(2) h1 {
+        font-size: 18px;
+      }
+      header > div:nth-child(2) p {
+        font-size: 17px;
+      }
+      header ul li a {
+    font-size: 16px;
+      }
     .avatar-name {
         font-size: 13px;
     }
@@ -1071,7 +1081,7 @@ circle#circle3 {
         width: 100%;
     }
     .head > div:last-child {
-        width: 182px;
+        width: 165px;
       }
 }
 @media only screen and (max-width:400px) {
@@ -1097,12 +1107,6 @@ circle#circle3 {
         width: 4px;
         height: 4px;
       }
-      /* .Gig {
-        display: block;
-      }
-      .mobile-Gig {
-       display: none;
-      } */
       .box .user-details {
         gap: 5px;
       }
