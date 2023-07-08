@@ -758,7 +758,7 @@ img[alt='icon'] {
 .info:hover .info-hover {
     /* display: block; */
     opacity: 100%;
-    z-index: 9;
+    z-index: 14;
 }
 
 .info-hover {
@@ -776,7 +776,7 @@ img[alt='icon'] {
     right: -79px;
     top: -137px;
     line-height: 24px;
-    transition: all .4s;
+    transition: all .2s;
 }
 .info-hover>div {
     display: flex;
