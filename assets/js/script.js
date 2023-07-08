@@ -27,15 +27,21 @@ check.forEach((item) => {
 
 let profile = document.getElementById('profile');
 let close = document.getElementById('close');
+let overlay2 = document.getElementById('overlay2');
 let header = document.querySelector('header');
 
 profile.addEventListener('click', function () {
   header.classList.add('active');
+  overlay2.classList.add('active');
 })
 close.addEventListener('click', function () {
   header.classList.remove('active');
+  overlay2.classList.remove('active');
 })
-
+overlay2.addEventListener('click',function () {
+  overlay2.classList.remove('active');
+  header.classList.remove('active');
+})
 // add user
 
 let add_modal = document.getElementById('add-user-modal');
