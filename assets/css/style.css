@@ -93,6 +93,7 @@ a {
     margin-bottom: 8px;
     font-size: 14px;
     margin-top: 0;
+    text-align: left;
 }
 
 body>main::-webkit-scrollbar,
@@ -455,7 +456,7 @@ body>main {
 /* header */
 header {
     background: linear-gradient(180deg, #CDAEE2 1.87%, #A75BD7 53.96%, #472CA1 100%);
-    width: 288px;
+    width: 230px;
     position: fixed;
     right: -400px;
     bottom: 0;
@@ -494,17 +495,17 @@ header>div:nth-child(2) {
 }
 
 header>div:nth-child(2) img[alt='profile'] {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     border-radius: 100%;
 }
 
 header>div:nth-child(2) h1 {
-    font-size: 24px;
+    font-size: 17px;
 }
 
 header>div:nth-child(2) p {
-    font-size: 23px;
+    font-size: 17px;
     margin-top: -7px;
     margin-bottom: 0;
 }
@@ -529,7 +530,7 @@ header ul li a {
     align-items: center;
     gap: 13px;
     color: white;
-    font-size: 23px;
+    font-size: 16px;
     font-weight: 400;
     cursor: pointer;
     padding: 9px 29px;
@@ -1222,5 +1223,12 @@ circle#circle3 {
 
     .avatar-name {
         width: 68% !important;
+    }
+    .toast {
+        padding: 21px 16px;
+        flex-direction: column;
+    }
+    .toast .left {
+     margin-right: 0;
     }
 }
