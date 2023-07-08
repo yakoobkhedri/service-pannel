@@ -751,7 +751,7 @@ img[alt='icon'] {
 }
 
 .info-hover {
-    width: 220px;
+    width: 151px;
     height: auto;
     background-color: #392B79;
     border-radius: 6px;
@@ -762,10 +762,9 @@ img[alt='icon'] {
     font-weight: bold;
     z-index: 9;
     right: -130px;
-    bottom: -221px;
-    line-height: 41px;
+    bottom: -134px;
+    line-height: 24px;
 }
-
 .info-hover>div {
     display: flex;
     align-items: center;
@@ -888,7 +887,9 @@ circle#circle3 {
     }
 }
 
-@media only screen and (max-width:1200px) {}
+@media only screen and (max-width:1200px) {
+  
+}
 
 @media only screen and (max-width:992px) {
 
@@ -901,11 +902,7 @@ circle#circle3 {
         width: 196px;
     }
 
-    .info-hover {
-        width: 151px;
-        line-height: 24px;
-        bottom: -134px;
-    }
+   
 
     .users {
         margin: 12px 0;
