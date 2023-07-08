@@ -901,6 +901,12 @@ circle#circle3 {
         width: 196px;
     }
 
+    .info-hover {
+        width: 151px;
+        line-height: 24px;
+        bottom: -134px;
+    }
+
     .users {
         margin: 12px 0;
     }
@@ -926,22 +932,36 @@ circle#circle3 {
         display: block;
     }
 
+    header {
+        width: 230px;
+    }
+
+    header>div:nth-child(2) h1 {
+        font-size: 18px;
+    }
+
+    header>div:nth-child(2) p {
+        font-size: 17px;
+    }
+
+    header ul li a {
+        font-size: 16px;
+    }
+
     .head1 {
         top: 59px;
     }
+
     .dashboard {
-       margin: 0;
-       height: 98vh;
-       border-radius: 0;
+        margin: 0;
+        height: 98vh;
+        border-radius: 0;
     }
+
     .head>div:first-child>div:first-child {
         justify-content: space-between;
     }
-    .info-hover {
-        width: 151px;
-        line-height: 24px;
-        bottom: -134px;
-    }
+
     #add-user-modal .date input:last-child {
         margin-top: 6px;
     }
@@ -1057,18 +1077,7 @@ circle#circle3 {
         justify-content: center;
         gap: 24px;
     }
-    header {
-        width: 230px;
-    }
-    header > div:nth-child(2) h1 {
-        font-size: 18px;
-      }
-      header > div:nth-child(2) p {
-        font-size: 17px;
-      }
-      header ul li a {
-    font-size: 16px;
-      }
+
     .avatar-name {
         font-size: 13px;
     }
@@ -1080,40 +1089,52 @@ circle#circle3 {
     .date-row>div:first-child {
         width: 100%;
     }
-    .head > div:last-child {
+
+    .head>div:last-child {
         width: 165px;
-      }
+    }
 }
+
 @media only screen and (max-width:400px) {
-    .head > div:last-child {
+    .head>div:last-child {
         width: 127px;
-      }
-      img[alt="icon"] {
+    }
+
+    img[alt="icon"] {
         width: 17px;
-      }
-      .head > div:first-child > div:first-child,.head > div:last-child > div:first-child {
+    }
+
+    .head>div:first-child>div:first-child,
+    .head>div:last-child>div:first-child {
         font-size: 11px;
-      }
-      .mobile-Gig {
-       font-size: 10px;
-      }
-      .bar {
+    }
+
+    .mobile-Gig {
+        font-size: 10px;
+    }
+
+    .bar {
         height: 4px;
-      }
-      .user-details {
-    justify-content: center;
-      }
-      .circle {
+    }
+
+    .user-details {
+        justify-content: center;
+    }
+
+    .circle {
         width: 4px;
         height: 4px;
-      }
-      .box .user-details {
+    }
+
+    .box .user-details {
         gap: 5px;
-      }
-      .user-details {
+    }
+
+    .user-details {
         padding: 5px 3px;
-      }
-      .avatar-name {
-        width: 68%!important;
-      }
+    }
+
+    .avatar-name {
+        width: 68% !important;
+    }
 }
