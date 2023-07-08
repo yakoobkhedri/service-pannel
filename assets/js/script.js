@@ -1,3 +1,21 @@
+// toast
+
+let colseToast=Array.from(document.querySelectorAll('.toast .bi-x'));
+let toast=Array.from(document.querySelectorAll('.toast'));
+
+colseToast.forEach((item)=>{
+  item.addEventListener('click',function () {
+    item.parentElement.classList.remove('active');
+  })
+})
+
+window.addEventListener('load',function () {
+  toast.forEach((item)=>{
+    setTimeout(() => {
+      item.classList.remove('active');
+    }, 2000);
+  })
+})
 // delete alert
 
 let deleteIcon = Array.from(document.getElementsByClassName('delete'));

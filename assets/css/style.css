@@ -23,16 +23,78 @@ a {
     display: block;
     cursor: pointer;
 }
-#overlay2{
+
+#overlay2 {
     background-color: #00000070;
     position: fixed;
     inset: 0;
-    z-index: 999!important;
+    z-index: 999 !important;
     display: none;
 }
-#overlay2.active{
-display: block;
+
+#overlay2.active {
+    display: block;
 }
+
+.toast#success-toast {
+    background-color: rgb(84, 249, 160);
+}
+
+.toast#warning-toast {
+    background-color: rgb(244, 231, 138);
+}
+
+.toast#error-toast {
+    background-color: rgb(251, 136, 136);
+}
+
+#toast-parent {
+    position: fixed;
+    top: 9px;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+}
+
+.toast {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 9px;
+    padding: 0px 16px;
+    z-index: 99;
+    margin-bottom: 9px;
+}
+
+.toast.active {
+    display: flex;
+}
+
+.toast .left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 81px;
+}
+
+.toast h3 {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 2px;
+    margin-top: 9px;
+}
+
+.toast .bi-x {
+    cursor: pointer;
+}
+
+.toast p {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+    margin-top: 0;
+}
+
 body>main::-webkit-scrollbar,
 #add-user-modal::-webkit-scrollbar,
 .dashboard::-webkit-scrollbar {
@@ -775,6 +837,7 @@ img[alt='icon'] {
     line-height: 24px;
     transition: all .2s;
 }
+
 .info-hover>div {
     display: flex;
     align-items: center;
@@ -897,9 +960,7 @@ circle#circle3 {
     }
 }
 
-@media only screen and (max-width:1200px) {
-  
-}
+@media only screen and (max-width:1200px) {}
 
 @media only screen and (max-width:992px) {
 
@@ -912,13 +973,30 @@ circle#circle3 {
         width: 196px;
     }
 
-   
+
 
     .users {
         margin: 12px 0;
     }
+
     .info-hover {
-       font-weight: bold;
+        font-weight: bold;
+    }
+
+    header {
+        width: 230px;
+    }
+
+    header ul li a {
+        font-size: 16px;
+    }
+
+    header>div:nth-child(2) h1 {
+        font-size: 18px;
+    }
+
+    header>div:nth-child(2) p {
+        font-size: 17px;
     }
 
 }
@@ -938,25 +1016,23 @@ circle#circle3 {
         width: 0%;
     }
 
+    header>div:nth-child(2) img[alt="profile"] {
+        width: 75px;
+        height: 75px;
+    }
+
     #add-user-modal .date {
         display: block;
     }
 
-    header {
-        width: 230px;
+    #add-user-modal p {
+        font-size: 12px !important;
     }
 
-    header>div:nth-child(2) h1 {
-        font-size: 18px;
-    }
 
-    header>div:nth-child(2) p {
-        font-size: 17px;
-    }
 
-    header ul li a {
-        font-size: 16px;
-    }
+
+
 
     .head1 {
         top: 59px;
