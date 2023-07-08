@@ -310,7 +310,7 @@ body>main {
     color: white;
     display: none;
     padding: 2px 14px;
-    z-index: 999;
+    z-index: 99999;
 }
 
 #add-user-modal.active {
