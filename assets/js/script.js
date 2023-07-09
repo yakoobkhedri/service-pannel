@@ -63,12 +63,6 @@ deleteIcon.forEach((item) => {
     confirm('مطمئنی که میخوایی حذف کنی؟');
   })
 })
-// goback
-function goback(event) {
-  event.preventDefault();
-  add_modal.classList.remove('active');
-  overlay.classList.remove('show');
-}
 // toggle check
 
 let check = Array.from(document.querySelectorAll('.check div'));
@@ -98,6 +92,14 @@ overlay2.addEventListener('click',function () {
   overlay2.classList.remove('active');
   header.classList.remove('active');
 })
+// goback
+function goback(event) {
+  header.classList.remove('active');
+  overlay2.classList.remove('active');
+  event.preventDefault();
+  add_modal.classList.remove('active');
+  overlay.classList.remove('show');
+}
 // add user
 
 let add_modal = document.getElementById('add-user-modal');
